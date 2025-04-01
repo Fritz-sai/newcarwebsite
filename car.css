@@ -147,3 +147,7 @@ input {
     bottom: 25px;
     left: 25px;
 }
+.left div a {
+    text-decoration: none;
+    color: white;
+}
