@@ -1,0 +1,148 @@
+body {
+    background-color: #bababa;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    display: flex;
+
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 2500px;
+}
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 112px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: #bababa;
+    top: 0;
+    z-index: 2;
+    color: white;
+}
+.logo {
+    width: 117px;
+}
+.left {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-between;
+    font-size: 25px;
+    margin-right: 10px;
+
+}
+.right {
+    justify-content: center;
+    align-items: center;
+}
+input {
+    width: 500px;
+    height: 50px;
+    border-radius: 50px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.carBack {
+    width: 100%;
+}
+.lambo {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+    width: 90%;
+
+}
+.carBack {
+    filter: brightness(90%);
+    z-index: -1;
+}
+.text {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    font-size: 40px;
+}
+.text p {
+    width: 60%;
+    font-size: 35px;
+    
+}
+.Brand {
+    width: 45%;
+    background-color: rgb(140, 141, 143);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    
+}
+.brand-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex: 1fr 1fr;
+    height: 300px;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    
+}
+.right-box, .left-box {
+  height: 300px;
+}
+.right-box {
+    background-color: #68aeba;
+    position: relative;
+}
+.nameBrand {
+    display: flex;
+    flex-direction: row;
+}
+.logoBrand {
+    width: 70px;
+}
+.nameBrand h1 {
+    font-size: 50px;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.flow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.model {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    right: 50px;
+
+
+}
+.left-box {
+    position: relative;
+}
+.Shop {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    color: white;
+    background-color: #6b8a97;
+    cursor: pointer;
+}
+.button {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
