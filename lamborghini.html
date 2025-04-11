@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Selector</title>
+  <link rel="stylesheet" href="assest/lamborghini.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="head">
+    <div class="right">
+      <img class="logo" src="logo/logo-removebg-preview.png" alt="BroomBroom Logo" />
+    </div>
+    <div class="middle">
+      <div class="search-container">
+        
+        <input type="text" placeholder="Search for your dream car..." />
+      </div>
+    </div>
+    <div class="left">
+      <a href="car.html">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Accessories</a>
+      <a href="#">Company</a>
+      <a href="#">About Us</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Select a Car</h2>
+      <ul>
+        <li class="active"
+        data-title="2019 Mustang BULLITT" 
+        data-img="picture/mustang.png"
+        data-speed="150+" 
+        data-seats="4" 
+        data-price="$46,595" >2019 Mustang Bullitt</li>
+        <li 
+        data-title="2020 Lamborghini" 
+        data-img="picture/lambo.png"
+        data-speed="216" 
+        data-seats="2" 
+        data-price="$500,000">2020 Ford GT</li>
+        <li
+        data-title="2021 Shelby GT500" 
+        data-img="picture/dodge.png"
+        data-speed="180+" 
+        data-seats="4" 
+        data-price="$74,095" >2021 Shelby GT500</li>
+        <li 
+        data-title="2022 Bronco" 
+        data-img="picture/porsche.png"
+        data-speed="110" 
+        data-seats="5" 
+        data-price="$30,000">2022 Bronco</li>
+      </ul>
+    </div>
+    <div class="car-display">
+      <h1>LAMBORGHINI</h1>
+      <h2 id="car-title">2019 Mustang BULLITT</h2>
+      <div class="container-image">
+        <img id="car-image" src="picture/mustang.png" alt="2019 Mustang Bullitt" />
+      </div>
+     
+      <div class="car-info">
+        <div class="info-box">
+          <span id="car-speed">150+</span>
+          <p>Top Speed (mph)</p>
+        </div>
+        <div class="info-box">
+          <span id="car-seats">4</span>
+          <p>Seating</p>
+        </div>
+        <div class="info-box">
+          <span  id="car-price">$46,595</span>
+          <p>Starting MSRP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const listItems = document.querySelectorAll(".sidebar li");
+  
+    const carTitle = document.getElementById("car-title");
+    const carImage = document.getElementById("car-image");
+    const carSpeed = document.getElementById("car-speed");
+    const carSeats = document.getElementById("car-seats");
+    const carPrice = document.getElementById("car-price");
+  
+    listItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        // 1. Remove previous active state
+        listItems.forEach((el) => el.classList.remove("actives"));
+        item.classList.add("actives");
+  
+        // 2. Get data attributes
+        const title = item.dataset.title;
+        const img = item.dataset.img;
+        const speed = item.dataset.speed;
+        const seats = item.dataset.seats;
+        const price = item.dataset.price;
+  
+        // 3. Update content
+        carTitle.textContent = title;
+        carImage.src = img;
+        carSpeed.textContent = speed;
+        carSeats.textContent = seats;
+        carPrice.textContent = price;
+      });
+    });
+  </script>  
+</body>
+</html>
