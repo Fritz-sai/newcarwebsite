@@ -22,7 +22,20 @@
     width: 100%;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
+    overflow-x: hidden;
     transition: background-color 0.3s ease;
+    
+  }
+  .imgback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+    
   }
   
   /* Header */
@@ -48,7 +61,33 @@
     transition: transform 0.3s ease;
     filter: brightness(0) invert(1);
   }
-  
+  .login {
+    position: fixed;
+    bottom: 50px;
+    z-index: -3;
+    opacity: 0;
+  }
+  .x {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+
+  }
+  .box-login {
+    width: 900px;
+    height: 800px;
+    background-color: #363636;
+    color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
   .logo:hover {
     transform: scale(1.05);
   }
@@ -56,6 +95,7 @@
   .left {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: auto;
     gap: 30px;
     font-size: 18px;
@@ -71,6 +111,7 @@
   .search-container {
     position: relative;
     width: 100%;
+    
   }
   
   .search-container input {
@@ -110,9 +151,11 @@
     justify-content: center;
     margin-top: 80px;
     position: relative;
-    width: 70%;
-    height: 80vh;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
+    pointer-events: none; 
+
   }
   
   
@@ -120,11 +163,12 @@
   
   .text {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 10%;
     transform: translateY(-50%);
-    max-width: 600px;
+    max-width: 800px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   
   }
   
   .text h1 {
@@ -138,6 +182,7 @@
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 30px;
+    margin-top: 50px;
     color: var(--text-secondary);
   }
   
@@ -249,6 +294,9 @@
     border-radius: 25px;
     font-size: 16px;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: black;
     background-color: var(--primary-color);
     cursor: pointer;
@@ -301,7 +349,10 @@
     font-size: 16px;
     pointer-events: none; /* Prevents icon from blocking input */
 }
-  
+
+.left div i:hover {
+  color: var(--primary-color);
+}
   .left div a::after {
     content: '';
     position: absolute;
@@ -312,6 +363,8 @@
     background-color: var(--primary-color);
     transition: width 0.3s ease;
   }
+ 
+  
   .footer {
     background-color: #0c0c0c;
     padding: 40px 5%;
